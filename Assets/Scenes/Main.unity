@@ -323,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2177246533823185538, guid: 943e630cce6e45b489ac60f986ac5f6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2177246533823185538, guid: 943e630cce6e45b489ac60f986ac5f6c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -418,7 +418,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 4640082840212227325}
   RB: {fileID: 0}
-  MovementSpeed: 0
+  MovementSpeedX: 0
+  MovementSpeedY: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
