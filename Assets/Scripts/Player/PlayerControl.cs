@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,12 +17,9 @@ public class PlayerControl : MonoBehaviour
     Vector3 MoveDirectionX;
     Vector3 MoveDirectionY;
 
-    Vector3 PlayerPosition;
-
 
     public float MovementSpeedX;
     public float MovementSpeedY;
-
 
 
     void Start()
@@ -48,24 +46,30 @@ public class PlayerControl : MonoBehaviour
     public void PlayerMovement()
     {
 
-        //transform.Translate(Vector3.right * MovementSpeedX * HorizontalInput * Time.deltaTime);
-        //transform.Translate(Vector3.forward * MovementSpeedY * VerticalInput * Time.deltaTime);
-
-        transform.position += new Vector3(HorizontalInput * Time.deltaTime * MovementSpeedX, VerticalInput * Time.deltaTime * MovementSpeedY, 0);
+        transform.position += new Vector3(HorizontalInput * Time.deltaTime * MovementSpeedX, VerticalInput * Time.deltaTime * MovementSpeedY, 0); // transfomr.Translate kullanmadým çünkü ihtiyacýmý karþýlamýyordu.
 
         if (HorizontalInput != 0)
         {
-            if(transform.rotation.y < 0.15f && HorizontalInput < 0)
+            if (transform.rotation.y < 0.15f && HorizontalInput < 0)
             {
-                transform.Rotate(0, 0, -HorizontalInput * MovementSpeedX / 100);
+                transform.Rotate(0, 0, -HorizontalInput * MovementSpeedX / 50);
             }
-            if(transform.rotation.y > -0.15f && HorizontalInput > 0)
+            if (transform.rotation.y > -0.15f && HorizontalInput > 0)
             {
-                transform.Rotate(0, 0, -HorizontalInput * MovementSpeedX / 100);
+                transform.Rotate(0, 0, -HorizontalInput * MovementSpeedX / 50);
             }
-            //transform.Rotate(0, 0, -HorizontalInput * Time.deltaTime * MovementSpeedX);
-            Debug.Log(transform.rotation.y); // 0.15 olana kadar çevir
-
+        }
+        if (Input.anyKey == false && transform.rotation.y < 0) // I used transform.rotation.y value for flagging. 
+        {
+            transform.Rotate(0, 0, 1);
+        }
+        if(Input.anyKey == false && transform.rotation.y > 0) // kendinle gurur duyduðun bir mekanik.
+        {
+            transform.Rotate(0, 0, -1);
         }
     }
 }
+
+
+
+// Debug.Log() ve Unity konsolundan yardým alarak bazý deðerleri flag value olarak kullanmayý öðrendin.
