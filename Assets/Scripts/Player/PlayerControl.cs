@@ -14,10 +14,6 @@ public class PlayerControl : MonoBehaviour
     float VerticalInput;
     float HorizontalInput;
 
-    Vector3 MoveDirectionX;
-    Vector3 MoveDirectionY;
-
-
     public float MovementSpeedX;
     public float MovementSpeedY;
 
@@ -28,7 +24,7 @@ public class PlayerControl : MonoBehaviour
 
         MovementSpeedY = 35f;
 
-        RB = GetComponent<Rigidbody>();
+        RB = GetComponent<Rigidbody>(); // IT IS NOT NECESSARY FOR NOW
 
     }
 
@@ -63,7 +59,7 @@ public class PlayerControl : MonoBehaviour
         {
             transform.Rotate(0, 0, 1);
         }
-        if(Input.anyKey == false && transform.rotation.y > 0) // kendinle gurur duyduðun bir mekanik.
+        if(Input.anyKey == false && transform.rotation.y > 0) // I TRIED VERY DIFFERENT THINGS BUT ONLY THIS WORKS
         {
             transform.Rotate(0, 0, -1);
         }
