@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 6824173711827440179}
   - component: {fileID: 3481499466192596155}
   - component: {fileID: 7276084788591544118}
+  - component: {fileID: 1148386085538351571}
   m_Layer: 0
   m_Name: Flying Insect
   m_TagString: FlyingInsect
@@ -473,3 +474,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1148386085538351571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308881349580703976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9310372c1be46d842a6604c1c0d91311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

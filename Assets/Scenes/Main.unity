@@ -394,6 +394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Insects: {fileID: 8308881349580703976, guid: 6369e806eb3bf3945b34ad0b00b2ed69, type: 3}
+  NumberOfInsects: 5
+  InsectSpawnLocationX: 0
+  InsectCounter: 0
+  SpawnerFlag: 0
 --- !u!1001 &913515904105864454
 PrefabInstance:
   m_ObjectHideFlags: 0

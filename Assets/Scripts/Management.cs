@@ -10,9 +10,11 @@ public class Management : MonoBehaviour
 
     public int NumberOfInsects = 5; // Number of Insects in first wave;
 
-    public float InsectSpawnLocationX; // Location of Insects that will be spawned
+    public float InsectSpawnLocationX; // Location of Insects that will be spawned.
 
-    public int InsectCounter = 0; // Flag value for stopping InvokeRepeating function
+    public int InsectCounter = 0; // Counter variable for feed the flag value.
+
+    public bool SpawnerFlag = false; // Flag value for stopping InvokeRepeating function.
 
 
 
@@ -25,13 +27,25 @@ public class Management : MonoBehaviour
     void Update()
     {
         InsectSpawnLocationX = Random.Range(-60, 60); // Location Randomizer
+
+        if(SpawnerFlag == true) // Iteration stopper. 
+        {
+            CancelInvoke("SpawnInsects");
+        }
     }
 
-    public void SpawnInsects() // Spawns Insects
+    public void SpawnInsects() // Spawns Insects.
     {
-            Instantiate(Insects, new Vector3(InsectSpawnLocationX, 75f, 67f), Insects.transform.rotation);
+        Instantiate(Insects, new Vector3(InsectSpawnLocationX, 75f, 67f), Insects.transform.rotation);
+
+
+        InsectCounter++; // Counter value iteration.
+
+        if(InsectCounter >= NumberOfInsects) // Condition that will stop the iteration of insect spawn.
+        {
+            SpawnerFlag = true; 
+        }
     }
 }
 
-// TODO: SOLVE THE BUGS
 
