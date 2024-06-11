@@ -31,8 +31,11 @@ public class InsectMovement : MonoBehaviour
         randomValue = Random.Range(-1, 3); // If Random.Range() is int, the minium value is inclusive and maximum value is exclusive.
                                            // This func returns -1, 0, 1, 2
     }
+
 }
 
 // TODO: Adjustments of speeds, add wall behaviour
 // NOT IN THIS SCRIPT BUT ADD COLLISION DETECTS TO THE INSECTS.
+// THIS SCRIPT ATTACHED TO MISSILE OBJECT
+
 

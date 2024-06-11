@@ -13,4 +13,15 @@ public class MissileMechanic : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // Collision detect (If missile hits the insect, both of them will be destroyed
+    // This mechanic can be improved (I will deal it with later)
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("FlyingInsect")) // I will recognize the collision object with TAG system in Unity.
+        {
+            Destroy(gameObject); // THIS REPRESENTS THE MISSILE (the game object that containing this script).
+            Destroy(collision.gameObject); // THIS REPRESENT THE INSECT (the game object whose collider you are colliding with.
+        }
+    }
 }
