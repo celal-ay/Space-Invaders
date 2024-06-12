@@ -17,14 +17,25 @@ public class InsectMovement : MonoBehaviour
 
     void Update()
     {
+
         if (randomValue <= 0) // Object's movement direction coming from this. (Direction feeding by random value).
         {
             transform.Translate(InsectSpeedX * Time.deltaTime, 0, 0);
         }
+
         else if (randomValue > 0)
         {
             transform.Translate(InsectSpeedX * Time.deltaTime * -1, 0, 0);
         }
+
+        // WALL BEHAVIOUR
+        // POSITION X -80 <-> 80
+
+        if(transform.position.x >= 80 || transform.position.x <= -80)
+        {
+            InsectSpeedX *= -1; //If this exceeds the given x positions, the insects direction will be converted.
+        }
+
     }
     public void Randomizer()
     {

@@ -44,9 +44,20 @@ public class PlayerControl : MonoBehaviour
 
         transform.position += new Vector3(HorizontalInput * Time.deltaTime * MovementSpeedX, VerticalInput * Time.deltaTime * MovementSpeedY, 0); // transfomr.Translate kullanmadým çünkü ihtiyacýmý karþýlamýyordu.
 
+
+        if(transform.position.x < -80) //Wall behaviour for left side
+        {
+            transform.position = new Vector3(-80, transform.position.y, transform.position.z);
+        }
+        if(transform.position.x > 80) // Wall behaviour for right side
+        {
+            transform.position = new Vector3(80, transform.position.y, transform.position.z);
+        }
+
+
         if (HorizontalInput != 0)
         {
-            if (transform.rotation.y < 0.15f && HorizontalInput < 0)
+            if (transform.rotation.y < 0.15f && HorizontalInput < 0) // It is about rotation.
             {
                 transform.Rotate(0, 0, -HorizontalInput * MovementSpeedX / 50);
             }

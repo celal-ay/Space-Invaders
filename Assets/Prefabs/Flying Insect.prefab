@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9135073665733423602}
   - component: {fileID: 2991543648754111924}
   - component: {fileID: 1077123831077882151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingInsects3_Wing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7412789736103266791}
   - component: {fileID: 3595908756214462590}
   - component: {fileID: 2306876221060090277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingInsects3_Wing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4935481521656592754}
   - component: {fileID: 3983013753991342674}
   - component: {fileID: 3475799106247551043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingInsects3_Wing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 7446481732276470464}
   - component: {fileID: 7642788355286438079}
   - component: {fileID: 5504453297902138386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingInsects3_Wing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3919819964613480679}
   - component: {fileID: 1371885535576703210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 1148386085538351571}
   - component: {fileID: 1317363032863577138}
   - component: {fileID: 8783745330464401962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flying Insect
   m_TagString: FlyingInsect
   m_Icon: {fileID: 0}
