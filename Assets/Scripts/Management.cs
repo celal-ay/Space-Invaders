@@ -7,12 +7,14 @@ public class Management : MonoBehaviour
 {
 
     public GameObject Insects;
+    public GameObject Asteroids;
 
     public int NumberOfInsects = 5; // Number of Insects in first wave;
 
     public float InsectSpawnLocationX; // Location of Insects that will be spawned.
 
-    public int InsectCounter = 0; // Counter variable for feed the flag value.
+    public int InsectCounter = 0; // Counter variables for feed the flag value.
+
 
     public bool SpawnerFlag = false; // Flag value for stopping InvokeRepeating function.
 
@@ -21,6 +23,7 @@ public class Management : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnInsects",2f, 0.4f); // Repeat process
+        InvokeRepeating("SpawnAsteroids", 1f, 1.2f);
     }
 
     // Update is called once per frame
@@ -45,6 +48,10 @@ public class Management : MonoBehaviour
         {
             SpawnerFlag = true; 
         }
+    }
+    public void SpawnAsteroids() // Spawns Asteroids.
+    {
+        Instantiate(Asteroids, new Vector3(InsectSpawnLocationX, 90f, 67f), Asteroids.transform.rotation); 
     }
 }
 
