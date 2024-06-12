@@ -51,7 +51,7 @@ public class Management : MonoBehaviour
     }
     public void SpawnAsteroids() // Spawns Asteroids.
     {
-        Instantiate(Asteroids, new Vector3(InsectSpawnLocationX, 90f, 67f), Asteroids.transform.rotation); 
+        Instantiate(Asteroids, new Vector3(InsectSpawnLocationX, 90f, 69f), Asteroids.transform.rotation); 
     }
 }
 
