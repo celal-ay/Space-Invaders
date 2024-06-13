@@ -14,7 +14,9 @@ public class Management : MonoBehaviour
     public GameObject ScriptHolder; // I will attach the gameobject that holds the script that I want to use its variable.
     public Shooting ShootingScript; // Making an instance belongs to Shooting.
 
+
     public TextMeshProUGUI MissileText; // Prints Missile information to the screen.
+    public TextMeshProUGUI NameText;
 
 
     public int NumberOfInsects = 5; // Number of Insects in first wave;
@@ -25,12 +27,14 @@ public class Management : MonoBehaviour
 
 
     public bool SpawnerFlag = false; // Flag value for stopping InvokeRepeating function.
-
+    public string username = "";
 
     void Start()
     {
 
+
         ShootingScript = ScriptHolder.GetComponent<Shooting>();
+        username = InputReceiver.Instance.username; // I used singleton.
 
         InvokeRepeating("SpawnInsects",2f, 0.4f); // Repeat process
         InvokeRepeating("SpawnAsteroids", 1f, 1.2f);
@@ -50,7 +54,7 @@ public class Management : MonoBehaviour
         }
 
         MissileUI();
-
+        NameUI();
     }
 
 
@@ -74,13 +78,17 @@ public class Management : MonoBehaviour
 
 
     
-
+    // UI functions
     public void MissileUI()
     {
         // THIS PRINTS THE REMANINING AMMO
         // I used an OOP feature for access a NumberOfMissiles variable.
 
         MissileText.text = "Remaining Ammo : " + ShootingScript.NumberOfMissiles;
+    }
+    public void NameUI()
+    {
+        NameText.text = "Player Name : " + username;
     }
 }
 
