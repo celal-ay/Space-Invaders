@@ -9,11 +9,14 @@ public class Shooting : MonoBehaviour
     public GameObject missile;
     public Vector3 missileSpawnPositon;   // ASSIGMENT OF MISSILES' LOCATION  
 
-    public int shootRate = 0; // SHOOT RATE OF THE GUN
+    public int NumberOfMissiles = 0;
+    public bool MissileActive = false;
 
 
     void Start()
     {
+        NumberOfMissiles = 10; // Base number of missiles.
+        MissileActive = true;
     }
 
     void Update()
@@ -25,10 +28,19 @@ public class Shooting : MonoBehaviour
 
     public void MissileTrigger()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) 
+        if(Input.GetKeyDown(KeyCode.Space) && MissileActive == true) 
         {
                 Instantiate(missile, missileSpawnPositon, transform.rotation);
+                NumberOfMissiles--;
+        }
+        if(NumberOfMissiles == 0)
+        {
+            MissileActive = false;
         }
     }
 }
+
+// TODO: CEPHANELÝÐÝ ARTIRACAK BOOSTLAR VESAÝRE GELÝÞTÝR
+// YENÝ BÝR SAHNE YAP. ENVANTERÝ FALAN GÖZLEMLEYEBÝLECEÐÝN
+
 
