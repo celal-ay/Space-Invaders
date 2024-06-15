@@ -8,6 +8,7 @@ public class AsteroidScript : MonoBehaviour
 
     public int health = 0;
     public float randomNumber;
+    public GameObject IronOre;
 
 
     void Start()
@@ -28,15 +29,17 @@ public class AsteroidScript : MonoBehaviour
 
             if (health == 0)
             {
-                Destroy(gameObject);
                 Destroy(collision.gameObject);
                 if(randomNumber > 50) // 50% chance of drop an item.
                 {
                     Debug.Log("Dropped an item"); // I will use an Instantiate method but not now.
+                    Instantiate(IronOre, transform.position, transform.rotation);
                 }
+                Destroy(gameObject);
             }
         }
     }
+
     public void Randomizer()
     {
         randomNumber = Random.Range(0, 100);

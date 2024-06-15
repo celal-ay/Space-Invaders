@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 4019c8c8c849a554e994361abc58e7ba
+guid: cb42d31447902ac438a12b54fb080fe8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - IronOre: {fileID: 6147856509774567664, guid: 6bc9c1ddf514de84ebe46f81b3f41ba1, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

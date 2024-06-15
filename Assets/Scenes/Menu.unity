@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputField: {fileID: 1332800497}
+  username: 
 --- !u!114 &145086965
 MonoBehaviour:
   m_ObjectHideFlags: 0
