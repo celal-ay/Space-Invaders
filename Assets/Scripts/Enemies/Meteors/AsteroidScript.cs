@@ -6,7 +6,9 @@ public class AsteroidScript : MonoBehaviour
 {
 
 
-    public int health = 0; 
+    public int health = 0;
+    public float randomNumber;
+
 
     void Start()
     {
@@ -15,19 +17,28 @@ public class AsteroidScript : MonoBehaviour
 
     void Update()
     {
-        
+        Randomizer();
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.CompareTag("Missile")) // If missile hits the asteroid, the health of asteroid will be decreased.
         {
             health--;
+            Destroy(collision.gameObject);
 
-            if(health == 0)
+            if (health == 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
+                if(randomNumber > 50) // 50% chance of drop an item.
+                {
+                    Debug.Log("Dropped an item"); // I will use an Instantiate method but not now.
+                }
             }
         }
+    }
+    public void Randomizer()
+    {
+        randomNumber = Random.Range(0, 100);
     }
 }
