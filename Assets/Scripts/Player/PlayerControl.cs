@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,6 +12,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject Player; //Attachment variable 
     public Rigidbody RB; // For the physical purposes like movement, collision etc...
 
+    public int CollectedIronOre;
+
     float VerticalInput;
     float HorizontalInput;
 
@@ -20,11 +23,14 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+
         MovementSpeedX = 90f;
 
         MovementSpeedY = 35f;
 
         RB = GetComponent<Rigidbody>(); // IT IS NOT NECESSARY FOR NOW
+
+        CollectedIronOre = 0;
 
     }
 
@@ -73,6 +79,20 @@ public class PlayerControl : MonoBehaviour
         if(Input.anyKey == false && transform.rotation.y > 0) // I TRIED VERY DIFFERENT THINGS BUT ONLY THIS WORKS
         {
             transform.Rotate(0, 0, -1);
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)  // This method collecting materials.
+    {
+        if (collision.collider.gameObject.CompareTag("IronOre"))
+        {
+            
+            Destroy(collision.gameObject);
+            CollectedIronOre++;
+            Debug.Log(CollectedIronOre);
+            
+           
         }
     }
 }

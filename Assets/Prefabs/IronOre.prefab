@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2437856608445875018}
   - component: {fileID: 5038804245684290214}
   - component: {fileID: 5579849727320082999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IronOre (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,11 +116,12 @@ GameObject:
   - component: {fileID: 5395495395094205226}
   - component: {fileID: 4199732503487301725}
   - component: {fileID: 4150466775650664016}
-  - component: {fileID: 3392869860555528118}
   - component: {fileID: 6386976458359425260}
-  m_Layer: 0
+  - component: {fileID: -1448155091343967174}
+  - component: {fileID: -1628300760617506941}
+  m_Layer: 8
   m_Name: IronOre
-  m_TagString: Untagged
+  m_TagString: IronOre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,8 +135,8 @@ Transform:
   m_GameObject: {fileID: 7705515827581408349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 84.678, z: 67}
-  m_LocalScale: {x: 0.9373874, y: 0.92989916, z: 1.7054791}
+  m_LocalPosition: {x: -0.19368, y: 84.725, z: 67.201}
+  m_LocalScale: {x: 2.75, y: 2.85, z: 5.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7795098157300964717}
@@ -191,8 +192,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3392869860555528118
-BoxCollider:
+--- !u!114 &6386976458359425260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7705515827581408349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb42d31447902ac438a12b54fb080fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IronOreSpeedY: 0
+--- !u!54 &-1448155091343967174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7705515827581408349}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-1628300760617506941
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -209,19 +250,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6386976458359425260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7705515827581408349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb42d31447902ac438a12b54fb080fe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IronOreSpeedY: 0
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
