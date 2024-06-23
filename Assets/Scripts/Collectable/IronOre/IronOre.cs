@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IronOre : MonoBehaviour
 {
     public float IronOreSpeedY;
+    public Sprite sprite;
+
     void Start()
     {
         IronOreSpeedY = 5f;

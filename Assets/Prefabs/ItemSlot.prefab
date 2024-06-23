@@ -302,10 +302,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   quantity: 0
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 9cb243b0af8de4b4899dd59b4987e404, type: 3}
   isFull: 0
-  quantityText: {fileID: 0}
-  itemImage: {fileID: 0}
+  quantityText: {fileID: 4443493470266822224}
+  itemImage: {fileID: 7439744533205141489}
 --- !u!1 &8965863737063450156
 GameObject:
   m_ObjectHideFlags: 0

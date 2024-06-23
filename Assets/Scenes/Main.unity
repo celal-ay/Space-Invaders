@@ -1527,17 +1527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1564d901dae0f074f8ee897497026954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &760063603 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4443493470266822224, guid: f81c4aa6c53584d4aaf5f02c871e3418, type: 3}
-  m_PrefabInstance: {fileID: 8355587101263608754}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &847451952 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2891583742559071242, guid: f81c4aa6c53584d4aaf5f02c871e3418, type: 3}
@@ -1842,17 +1831,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2224327406394768662, guid: 943e630cce6e45b489ac60f986ac5f6c, type: 3}
   m_PrefabInstance: {fileID: 913515904105864454}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1061679956 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7439744533205141489, guid: f81c4aa6c53584d4aaf5f02c871e3418, type: 3}
-  m_PrefabInstance: {fileID: 8355587101263608754}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1378956374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2523,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 944476471323507389, guid: 943e630cce6e45b489ac60f986ac5f6c, type: 3}
+      propertyPath: itemSpriteOre
+      value: 
+      objectReference: {fileID: 21300000, guid: 9cb243b0af8de4b4899dd59b4987e404, type: 3}
     - target: {fileID: 2177246533823185538, guid: 943e630cce6e45b489ac60f986ac5f6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2717,14 +2699,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3380813310905543169, guid: f81c4aa6c53584d4aaf5f02c871e3418, type: 3}
-      propertyPath: itemImage
-      value: 
-      objectReference: {fileID: 1061679956}
-    - target: {fileID: 3380813310905543169, guid: f81c4aa6c53584d4aaf5f02c871e3418, type: 3}
-      propertyPath: quantityText
-      value: 
-      objectReference: {fileID: 760063603}
     - target: {fileID: 6807102300098629844, guid: f81c4aa6c53584d4aaf5f02c871e3418, type: 3}
       propertyPath: m_Name
       value: ItemSlot
