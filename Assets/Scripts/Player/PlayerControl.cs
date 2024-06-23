@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Timeline;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 
@@ -11,6 +12,9 @@ public class PlayerControl : MonoBehaviour
 {
     public GameObject Player; //Attachment variable 
     public Rigidbody RB; // For the physical purposes like movement, collision etc...
+    public InventoryManager inventoryManager;
+
+    public Sprite itemSpriteOre;
 
     public int CollectedIronOre;
 
@@ -29,8 +33,11 @@ public class PlayerControl : MonoBehaviour
         MovementSpeedY = 35f;
 
         RB = GetComponent<Rigidbody>(); // IT IS NOT NECESSARY FOR NOW
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
 
         CollectedIronOre = 0;
+
+
 
     }
 
@@ -91,6 +98,7 @@ public class PlayerControl : MonoBehaviour
             Destroy(collision.gameObject);
             CollectedIronOre++;
             Debug.Log(CollectedIronOre);
+            inventoryManager.AddItem(collision.gameObject.name, CollectedIronOre, itemSpriteOre);
             
            
         }
